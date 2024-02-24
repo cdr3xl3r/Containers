@@ -1,0 +1,12 @@
+FROM debian:latest
+RUN apt update && apt install iputils-ping -y
+CMD ["ping", "www.google.com"]
+RUN echo "This is a test"
+RUN apt install net-tools -y
+RUN apt install curl -y
+RUN apt install wget -y
+RUN apt install telnet -y
+RUN apt install dnsutils -y
+RUN apt install iproute2 -y
+RUN apt install iputils-tracepath -y
+RUN apt upgrade -y && apt autoremove -y
